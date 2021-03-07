@@ -1,6 +1,0 @@
-com/products/productsdemo/ProductsdemoApplicationTests.java
- com.products.productsdemo.ProductsdemoApplicationTests
-com/products/productsdemo/Controller/ProductControllerTest.java
- com.products.productsdemo.Controller.ProductControllerTest
-com/products/productsdemo/Service/ProductServiceTest.java
- com.products.productsdemo.Service.ProductServiceTest
