@@ -9,8 +9,7 @@
         Cartoon Size - {{cartItem.cartoonSize}}
         <br>
         Cartoon Price - {{cartItem.cartoonPrice}}
-        <br>
-        <!-- <b style="color: crimson;">Buy 3 get 10% Off !!</b> -->
+        <br>        
     </p>
     <div class="summary-delivery">
         <select name="delivery-collection" #uitType (change)="setUnits(uitType.value)">
@@ -27,6 +26,5 @@
   </div>
   <div class="subtotal"> {{subTotal}}</div>
   <div class="remove">
-    <i class="fa fa-trash-o" (click)= "removeItem()"></i>
-    <!-- <button>Remove</button> -->
+    <i class="fa fa-trash-o" (click)= "removeItem()"></i>  
   </div>

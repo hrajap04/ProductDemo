@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from 'src/app/classes/Product';
 import { BasicDataService } from 'src/app/services/basic-data.service';
 
@@ -9,7 +10,7 @@ import { BasicDataService } from 'src/app/services/basic-data.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public basicDataService: BasicDataService) { }
+  constructor(private _router: Router,public basicDataService: BasicDataService) { }
 
   ngOnInit(): void {
     this.loadData();
@@ -20,13 +21,18 @@ export class HomeComponent implements OnInit {
     this.basicDataService.dummyData().
       subscribe((dataAdded: string) => {       
         console.log(dataAdded);
+        this.basicDataService.getAllProducts().
+        subscribe((products: Product[]) => {
+          this.basicDataService.productData = products;
+          console.log(this.basicDataService.productData);
+          this.goToProducts();
+        });
       });
     
-    this.basicDataService.getAllProducts().
-      subscribe((products: Product[]) => {
-        this.basicDataService.productData = products;
-        console.log(this.basicDataService.productData);
-      });
 
+
+  }
+  public goToProducts(){
+    this._router.navigate(['./productsList']);
   }
 }

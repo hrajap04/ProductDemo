@@ -9,37 +9,24 @@ import { catchError } from 'rxjs/operators';
 export class DataService {
 
 
-  constructor(private HttpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
   private handleErrors(errorResponce: HttpErrorResponse) {
     console.log('Error- ' + errorResponce);
   }
 
   getData(url: string): Observable<any> {
-    
     console.log(url);
-    return this.HttpClient.get<any>(url);
-    //catchError(thi.handleErrors);
+    return this.httpClient.get<any>(url);
   }
-  getPrice(url: string,productId: number, qty:number): Observable<any> {
+
+  getPrice(url: string, productId: number, qty: number): Observable<any> {
     const params = new HttpParams()
-    .set("productId", productId.toString())
-    .set("qty", qty.toString());
-//     let headers = new Headers();
-// headers.append('Content-Type', 'application/json');
-// headers.append("productId", productId.toString());
-// headers.append("productId", qty.toString())
-
-    // params.append("productId", productId.toString());
-    // params.append("qty", qty.toString())
+      .set("productId", productId.toString())
+      .set("qty", qty.toString());
     console.log(url);
-     return this.HttpClient.get<any>(url, {params: params});
-    // catchError(thi.handleErrors);
-    //  return null;
+    return this.httpClient.get<any>(url, { params: params });
   }
 
-
-  
-  //postData
 }
   
