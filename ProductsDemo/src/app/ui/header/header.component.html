@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark  bg-dark sticky-top"style=" border-bottom: 2px solid #666A82; opacity: .98; ">
+  <img src="assets/shopping_cart2.png" alt="" class="img-fluid  z-depth-0" style="width: 8vmin; height: 8vmin;  margin-right: 7px;margin-right: 30px;">
+     <!-- <a class="navbar-brand" href="#">  My Shop</a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+         <h4> <a class="nav-link" href="#"><i class="fa fa-fw fa-home"></i>  <span>Home</span> <span class="sr-only">(current)</span></a></h4>          
+        </li>    
+        <li class="nav-item">
+          <h4><a class="nav-link" href="#" routerLink="/productsList"><i class='fa fa-cube'></i><span> Products</span></a></h4>
+        </li>      
+      </ul>
+      <form class="form-inline my-2 my-lg-3">
+        <ul class="navbar-nav mr-auto">        
+          <li class="nav-item">
+            <h4> <a class="nav-link" href="#" routerLink="/cart"><i class="fas fa-shopping-cart"> </i>
+                <span class='badge badge-warning' id='lblCartCount'> {{basicDataService.CartItems.length}} </span> </a> </h4>
+          </li>
+        </ul>       
+      </form>
+    </div>
+  </nav>
+
