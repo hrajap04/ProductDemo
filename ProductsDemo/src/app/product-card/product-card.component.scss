@@ -40,20 +40,16 @@ padding: 5%;
 }
 
 
-.quantity-field {
-  //   background-color: #ccc;
-    border: 1px solid #aaa;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    padding: 2px;
-    width: 3.75rem;
-    // float: none;
-  }
+.quantity-field {  
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  padding: 2px;
+  width: 3.75rem;    
+}
   
-  .quantity
-   {
-       text-align: center;
-      width: 34%;
-    float: left;
-      width: 10%;
-  }
+.quantity {
+  text-align: center;
+  float: left;
+  width: 10%;
+}

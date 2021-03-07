@@ -6,16 +6,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-         <h4> <a class="nav-link" href="#"><i class="fa fa-fw fa-home"></i>  <span>Home</span> <span class="sr-only">(current)</span></a></h4>          
+         <h4> <a class="nav-link" href="#" routerLink="/"><em class="fa fa-fw fa-home"></em>  <span>Home</span> <span class="sr-only">(current)</span></a></h4>          
         </li>    
         <li class="nav-item">
-          <h4><a class="nav-link" href="#" routerLink="/productsList"><i class='fa fa-cube'></i><span> Products</span></a></h4>
+          <h4><a class="nav-link" href="#" routerLink="/productsList"><em class='fa fa-cube'></em><span> Products</span></a></h4>
         </li>      
       </ul>
       <form class="form-inline my-2 my-lg-3">
         <ul class="navbar-nav mr-auto">        
           <li class="nav-item">
-            <h4> <a class="nav-link" href="#" routerLink="/cart"><i class="fas fa-shopping-cart"> </i>
+            <h4> <a class="nav-link" href="#" routerLink="/cart"><em class="fas fa-shopping-cart"> </em>
                 <span class='badge badge-warning' id='lblCartCount'> {{basicDataService.CartItems.length}} </span> </a> </h4>
           </li>
         </ul>       

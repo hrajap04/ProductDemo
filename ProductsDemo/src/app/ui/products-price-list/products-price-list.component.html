@@ -16,9 +16,9 @@
                         data-holder-rendered="true">
                     <div class="card-body mx-auto">
                         <p class="card-text ">
-                            <b>
+                            <strong>
                                 <h1>{{product.productName}}</h1>
-                            </b>
+                            </strong>
                         </p>
                     </div>
 
@@ -28,7 +28,7 @@
                 <input type="number" [(ngModel)]="displayCount" style=" width: 40px; margin-left: 10px; " (change)="loadData()" />
             </div>
             <div class="row col-sm-6 col-md-8 col-lg-8 col-xl-8" style="padding: 30px;">
-                <table class="table">
+                <table class="table" aria-describedby="prieList">
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">Item Qty</th>
