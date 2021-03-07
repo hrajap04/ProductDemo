@@ -217,10 +217,6 @@ li.subtotal:before {
   width: 35%;
 }
 
-.product-details {
-  width: 65%;
-}
-
 .product-frame {
   border: 1px solid #aaa;
 }
@@ -230,6 +226,7 @@ li.subtotal:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  width: 65%;
 }
 
 .quantity-field {

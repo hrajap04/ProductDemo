@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BasicDataService } from 'src/app/services/basic-data.service';
 import { CartItem } from '../../classes/CartItem';
 

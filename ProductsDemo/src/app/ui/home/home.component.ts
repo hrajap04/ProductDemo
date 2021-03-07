@@ -12,8 +12,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private _router: Router,public basicDataService: BasicDataService) { }
 
-  ngOnInit(): void {
-    //this.loadData();
+  ngOnInit(): void {    
   }
 
   //to load initial data
