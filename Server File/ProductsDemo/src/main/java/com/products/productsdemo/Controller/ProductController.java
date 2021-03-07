@@ -21,37 +21,38 @@ public class ProductController {
         this.productService = productService;
     }
 
-
+    //insert dummy data to the DB
     @GetMapping("/dummy_data")
     public void dummyData(){
         System.out.println("data added");
         productService.addDummyProduct();
     }
+    //Test
     @GetMapping("/hello")
     public String sayHello(){
         return "Hello";
     }
-//    @PostMapping("/newUser")
-//    public Product saveUser(@RequestBody Product product){
-//        return  productService.addProduct(product);
-//    }
 
+    //Get the price of a given product for a given qty
     @GetMapping("/prodcut_price")
     public double getProductPrice(@RequestParam int productId, @RequestParam int qty){
         Product product = productService.getProduct(productId);
         return  productService.priceCalculation(product, qty);
     }
 
+    //get all the products
     @GetMapping("/all_products")
-    public List<Product> getAllUsers(){
+    public List<Product> getAllProducts(){
         return productService.getAllProducts();
     }
 
+    //get a list of prices for a given product
     @GetMapping("/prodcut_price_list")
     public List<ItemPrice> getProductPriceList(@RequestParam int productId, @RequestParam int qty){
         return  productService.getProductPriceList(productId, qty);
     }
 
+    //remove all the data
     @GetMapping("/remove_data")
     public String removeAllData(){
         System.out.println("data removed");
