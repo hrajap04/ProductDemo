@@ -11,10 +11,6 @@ export class DataService {
 
   constructor(private httpClient: HttpClient) { }
 
-  private handleErrors(errorResponce: HttpErrorResponse) {
-    console.log('Error- ' + errorResponce);
-  }
-
   getData(url: string): Observable<any> {
     console.log(url);
     return this.httpClient.get<any>(url);

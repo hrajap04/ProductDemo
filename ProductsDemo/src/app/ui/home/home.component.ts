@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   constructor(private _router: Router,public basicDataService: BasicDataService) { }
 
   ngOnInit(): void {
-    this.loadData();
+    //this.loadData();
   }
 
   //to load initial data
@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
         });
       });
     
-
+  
 
   }
   public goToProducts(){

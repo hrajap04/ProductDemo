@@ -126,5 +126,10 @@ public class ProductService {
         return  totalAmount;
     }
 
+    //remove all the products
+    public String removeAllProducts() {
+        productRepository.deleteAll();
+        return "Data Deleted";
+    }
 
 }

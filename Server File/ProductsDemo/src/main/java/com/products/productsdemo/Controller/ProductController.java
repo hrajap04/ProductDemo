@@ -23,10 +23,9 @@ public class ProductController {
 
 
     @GetMapping("/dummy_data")
-    public String dummyData(){
+    public void dummyData(){
         System.out.println("data added");
         productService.addDummyProduct();
-        return "Data Added";
     }
     @GetMapping("/hello")
     public String sayHello(){
@@ -51,6 +50,12 @@ public class ProductController {
     @GetMapping("/prodcut_price_list")
     public List<ItemPrice> getProductPriceList(@RequestParam int productId, @RequestParam int qty){
         return  productService.getProductPriceList(productId, qty);
+    }
+
+    @GetMapping("/remove_data")
+    public String removeAllData(){
+        System.out.println("data removed");
+        return productService.removeAllProducts();
     }
 
 }
